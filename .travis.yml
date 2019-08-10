@@ -1,0 +1,5 @@
+language: minimal
+script:
+    - docker build -t $DOCKER_TAG .
+    - docker login -p $DOCKER_PASSWORD -u $DOCKER_USERNAME
+    - docker push $DOCKER_TAG
